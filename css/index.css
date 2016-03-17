@@ -135,8 +135,8 @@ background-color:grey;
 }
 
 .viewButton { 
-background-color:Transparent;
-background-image:url('../img/button_view.png');
+background-color:grey;
+/*background-image:url('../img/button_view.png');*/
 width:64px;
 height:32px;
 }
