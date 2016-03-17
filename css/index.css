@@ -109,7 +109,8 @@ background-color: red;
 float:left;
 margin-left:0;
 position:absolute;
-left:0px
+left:0px;
+border-radius: 4px;
 }
 
 .removeTasks {
@@ -118,29 +119,30 @@ float:right;
 margin-right:0;
 position:absolute;
 right:0px;
+border-radius: 4px;
 }
 
 .checkbox {
-background-color:Transparent;
-background-image:url('../img/check_box.png');
+/*background-color:Transparent;
+background-image:url('../img/check_box.png');*/
 width:34px;
 height:32px;
 }
 
 .textbox {
-background-color:grey;
+/*background-color:grey;*/
 }
 
 .viewButton { 
-background-color:grey;
+/*background-color:grey;*/
 /*background-image:url('../img/button_view.png');*/
 width:64px;
 height:32px;
 }
 
 .deleteButton { 
-background-color:Transparent;
-background-image:url('../img/button_delete.png');
+/*background-color:Transparent;
+background-image:url('../img/button_delete.png');*/
 width:64px;
 height:32px;
 }
