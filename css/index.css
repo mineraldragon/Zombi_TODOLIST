@@ -25,8 +25,7 @@ body {
 -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
 -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 
-background-image:url('../img/bg_pattern.png');
-background-attachment:fixed;
+
 font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 font-size:12px;
 height:100%;
@@ -106,8 +105,7 @@ animation:fade 3000ms infinite;
 }
 
 .addToDo {
-background-color: Transparent;
-border-color: Transparent;
+background-color: red;
 float:left;
 margin-left:0;
 position:absolute;
@@ -115,8 +113,7 @@ left:0px
 }
 
 .removeTasks {
-background-color: Transparent;
-border-color: Transparent;
+background-color: green;
 float:right;
 margin-right:0;
 position:absolute;
