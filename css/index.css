@@ -105,21 +105,21 @@ animation:fade 3000ms infinite;
 }
 
 .addToDo {
-background-color: red;
+/*background-color: red;
 float:left;
 margin-left:0;
 position:absolute;
 left:0px;
-border-radius: 4px;
+border-radius: 4px;*/
 }
 
 .removeTasks {
-background-color: green;
+/*background-color: green;
 float:right;
 margin-right:0;
 position:absolute;
 right:0px;
-border-radius: 4px;
+border-radius: 4px;*/
 }
 
 .checkbox {
