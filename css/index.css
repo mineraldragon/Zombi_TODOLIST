@@ -111,11 +111,13 @@ height:32px;
 
 .startObs {
 background-color: red;
+width:64px;
 height:32px;
 }
 
 .stopObs {
 background-color: light-gray;
+width:64px;
 height:32px;
 }
 
