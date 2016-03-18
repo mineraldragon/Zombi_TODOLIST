@@ -105,18 +105,18 @@ animation:fade 3000ms infinite;
 }
 
 .addToDo {
-background-color: white;
+/*background-color: white;*/
 height:32px;
 }
 
 .startObs {
-background-color: red;
+/*background-color: red;*/
 width:64px;
 height:32px;
 }
 
 .stopObs {
-background-color: light-gray;
+/*background-color: light-gray;*/
 width:64px;
 height:32px;
 }

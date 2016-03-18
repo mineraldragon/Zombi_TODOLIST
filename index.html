@@ -78,14 +78,15 @@
                 element2.className = "textbox";
                 cell2.appendChild(element2);
                 
-                //Set up the View Button
+                //Set up the point or on/off Button
                 var cell3 = row.insertCell(2);
                 var element3 = document.createElement("input");
                 element3.type = "button";
-                element3.id = rowID;
-                element3.setAttribute("onclick","viewSelectedRow(document.getElementById('text'+this.id))");
+                element3.id = "Point"+rowID;
+				element3.value="Point";				
+                element3.setAttribute("onclick","switchpoint(element3)");
                 element3.className = "viewButton";
-				element3.value="View";
+
                 cell3.appendChild(element3);
                 
                 //Set up the Delete Button
@@ -158,6 +159,15 @@
                 p.parentNode.removeChild(p);
                 saveToDoList();
             }
+			
+			function switchpoint(pointButton){
+  currentvalue = pointButton.value;
+  if(currentvalue == "On/Off"){
+    document.getElementById(pointButton.id).value="Point";
+  }else{
+    document.getElementById(pointButton.id).value="On/Off";
+  }
+}
             
             
             function removeCompletedTasks()
@@ -301,11 +311,13 @@
             function startObserving()
 			{
 			var startTime= Date.now();
+			//remove 'view' and 'delete' buttons
 			}
         
             function stopObserving()
 			{
 			var stopTime= Date.now();
+			//show data
 			}
 			
         </script>
