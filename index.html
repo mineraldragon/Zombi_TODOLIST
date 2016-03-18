@@ -59,7 +59,7 @@
                 //Set up the CheckBox
                 var cell1 = row.insertCell(0);
                 var element1 = document.createElement("input");
-                element1.type = "checkbox";
+                element1.type = "button";
                 element1.name="chkbox[]";
                 element1.checked = todoDictionary["check"];
                 element1.setAttribute("onclick","checkboxClicked()");
@@ -98,7 +98,7 @@
                 cell4.appendChild(element4);
                 
                 //Save & Update UI
-                checkboxClicked();
+                //checkboxClicked();
                 saveToDoList();
                 
                 if (!appIsLoading)
@@ -124,10 +124,11 @@
                     //checkbox is checked
                     if(null != chkbox && true == chkbox.checked)
                     {
-                        if(null != textbox)
-                        {		
-                            textbox.style.setProperty("text-decoration", "line-through");
-                        }
+					
+                        //if(null != textbox)
+                        //{		
+                        //    textbox.style.setProperty("text-decoration", "line-through");
+                        //}
                     }
                     
                     //checkbox is not checked
@@ -297,9 +298,16 @@
                 saveToDoList();
             }
             
-            
+            function startObserving()
+			{
+			var startTime= Date.now();
+			}
         
-
+            function stopObserving()
+			{
+			var stopTime= Date.now();
+			}
+			
         </script>
     </head>
     
@@ -307,9 +315,10 @@
     <body onload="loadToDoList()" >
         <!--<img src="img/header.png" width="100%" />
         <br/>-->
-        <button type="button" class="addToDo" onclick="createNewToDo()">Add To-Do</button>
-        <button type="button" class="removeTasks" onclick="removeCompletedTasks()">Remove Completed Tasks</button>
-        <br/><br/><br/>
+        <button type="button" class="addToDo" onclick="createNewToDo()">Add Event Category</button>
+        <button type="button" class="startObs" onclick="startObserving()">Start</button>
+        <button type="button" class="stopObs" onclick="stopObserving()">Stop</button>
+		<br/><br/><br/>
         <table id="dataTable" width="100%" border="0">
         </table>
     </body>
