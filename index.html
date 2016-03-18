@@ -59,7 +59,7 @@
                 var rowCount = table.rows.length;
                 var row = table.insertRow(rowCount);
                 
-				if(MyApp.status==1){
+				
                 //Set up the CheckBox
                 var cell1 = row.insertCell(0);
                 var element1 = document.createElement("input");
@@ -69,8 +69,7 @@
                 element1.setAttribute("onclick","checkboxClicked()");
                 element1.className = "checkbox";
                 cell1.appendChild(element1);
-                }
-				
+                
                 //Set up the TextBox
                 var cell2 = row.insertCell(1);
                 var element2 = document.createElement("input");
@@ -83,7 +82,6 @@
                 element2.className = "textbox";
                 cell2.appendChild(element2);
                 
-				if(MyApp.status==0){
                 //Set up the point or on/off Button
                 var cell3 = row.insertCell(2);
                 var element3 = document.createElement("input");
@@ -103,8 +101,7 @@
                 element4.className = "deleteButton";
 				element4.value="Delete";
                 cell4.appendChild(element4);
-                }
-				
+                
                 //Save & Update UI
                 //checkboxClicked();
                 saveToDoList();
