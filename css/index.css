@@ -105,30 +105,24 @@ animation:fade 3000ms infinite;
 }
 
 .addToDo {
-background-color: grey;
-float:left;
-margin-left:0;
-position:absolute;
-left:0px;
+background-color: white;
 border-radius: 4px;
+width:34px;
+height:32px;
 }
 
 .startObs {
-background-color: green;
-float:right;
-margin-right:0;
-position:absolute;
-right:0px;
+background-color: red;
 border-radius: 4px;
+width:34px;
+height:32px;
 }
 
 .stopObs {
-background-color: red;
-float:right;
-margin-right:0;
-position:absolute;
-right:0px;
+background-color: light-gray;
 border-radius: 4px;
+width:34px;
+height:32px;
 }
 
 .checkbox {
