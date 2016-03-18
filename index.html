@@ -85,15 +85,16 @@
                 element3.id = rowID;
                 element3.setAttribute("onclick","viewSelectedRow(document.getElementById('text'+this.id))");
                 element3.className = "viewButton";
+				element3.value="View";
                 cell3.appendChild(element3);
                 
                 //Set up the Delete Button
                 var cell4 = row.insertCell(3);
                 var element4 = document.createElement("input");
                 element4.type = "button";
-              
                 element4.setAttribute("onclick","deleteSelectedRow(this)");
                 element4.className = "deleteButton";
+				element4.value="Delete";
                 cell4.appendChild(element4);
                 
                 //Save & Update UI
@@ -306,8 +307,8 @@
     <body onload="loadToDoList()" >
         <!--<img src="img/header.png" width="100%" />
         <br/>-->
-        <button type="button" class="addToDo" onclick="createNewToDo()" value="Add To-Do"></button>
-        <button type="button" class="removeTasks" onclick="removeCompletedTasks()" value="remove completed tasks"></button>
+        <button type="button" class="addToDo" onclick="createNewToDo()">Add To-Do</button>
+        <button type="button" class="removeTasks" onclick="removeCompletedTasks()">Remove Completed Tasks</button>
         <br/><br/><br/>
         <table id="dataTable" width="100%" border="0">
         </table>
