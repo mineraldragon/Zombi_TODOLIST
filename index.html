@@ -19,10 +19,13 @@
  -->
 <html>
     <head>
-        <title>Zombie Apocalypse To-Do List</title>
+        <title>Event logger</title>
         <link rel="stylesheet" type="text/css" href="css/index.css"/>
         <script type="text/javascript" language="JavaScript">
             
+			var MyApp = {};
+			MyApp.status=0;
+			
             //Create a new To-Do
             function createNewToDo()
             {
@@ -56,10 +59,11 @@
                 var rowCount = table.rows.length;
                 var row = table.insertRow(rowCount);
                 
+				
                 //Set up the CheckBox
                 var cell1 = row.insertCell(0);
                 var element1 = document.createElement("input");
-                element1.type = "checkbox";
+                element1.type = "button";
                 element1.name="chkbox[]";
                 element1.checked = todoDictionary["check"];
                 element1.setAttribute("onclick","checkboxClicked()");
@@ -78,30 +82,32 @@
                 element2.className = "textbox";
                 cell2.appendChild(element2);
                 
-                //Set up the View Button
+                //Set up the point or on/off Button
                 var cell3 = row.insertCell(2);
                 var element3 = document.createElement("input");
                 element3.type = "button";
-                element3.id = rowID;
-                element3.setAttribute("onclick","viewSelectedRow(document.getElementById('text'+this.id))");
+                element3.id = "Point"+rowID;
+				element3.value="Point";				
+                element3.setAttribute("onclick","switchpoint(this)");
                 element3.className = "viewButton";
+
                 cell3.appendChild(element3);
                 
                 //Set up the Delete Button
                 var cell4 = row.insertCell(3);
                 var element4 = document.createElement("input");
                 element4.type = "button";
-              
                 element4.setAttribute("onclick","deleteSelectedRow(this)");
                 element4.className = "deleteButton";
+				element4.value="Delete";
                 cell4.appendChild(element4);
                 
                 //Save & Update UI
-                checkboxClicked();
+                //checkboxClicked();
                 saveToDoList();
                 
-                if (!appIsLoading)
-                alert("Task Added Successfully.");
+                //if (!appIsLoading)
+                //alert("Task Added Successfully.");
             }
             
             
@@ -123,10 +129,11 @@
                     //checkbox is checked
                     if(null != chkbox && true == chkbox.checked)
                     {
-                        if(null != textbox)
-                        {		
-                            textbox.style.setProperty("text-decoration", "line-through");
-                        }
+					
+                        //if(null != textbox)
+                        //{		
+                        //    textbox.style.setProperty("text-decoration", "line-through");
+                        //}
                     }
                     
                     //checkbox is not checked
@@ -156,6 +163,16 @@
                 p.parentNode.removeChild(p);
                 saveToDoList();
             }
+			
+			function switchpoint(pointButton){
+  currentvalue = pointButton.value;
+  //alert(currentvalue);
+  if(currentvalue == "On/Off"){
+    document.getElementById(pointButton.id).value="Point";
+  }else{
+    document.getElementById(pointButton.id).value="On/Off";
+  }
+}
             
             
             function removeCompletedTasks()
@@ -296,19 +313,32 @@
                 saveToDoList();
             }
             
-            
+            function startObserving()
+			{
+			var startTime= Date.now();
+			MyApp.status=1;
+			//Once started, name field becomes a button
+			//remove 'view' and 'delete' buttons
+			}
         
-
+            function stopObserving()
+			{
+			var stopTime= Date.now();
+			MyApp.status=0;
+			//show data
+			}
+			
         </script>
     </head>
     
    
     <body onload="loadToDoList()" >
-        <img src="img/header.png" width="100%" />
-        <br/>
-        <button type="button" class="addToDo" onclick="createNewToDo()"><img src="img/button_addtodo.png" /></button>
-        <button type="button" class="removeTasks" onclick="removeCompletedTasks()"><img src="img/button_removetasks.png" /></button>
-        <br/><br/><br/>
+        <!--<img src="img/header.png" width="100%" />
+        <br/>-->
+        <table width="100%" border="0"><tr><td><button type="button" class="addToDo" onclick="createNewToDo()">Add Event Category</button></td>
+        <td><button type="button" class="startObs" onclick="startObserving()">Start</button></td>
+        <td><button type="button" class="stopObs" onclick="stopObserving()">Stop</button></td></tr></table>
+		<br/><br/><br/>
         <table id="dataTable" width="100%" border="0">
         </table>
     </body>

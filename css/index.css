@@ -25,8 +25,7 @@ body {
 -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
 -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 
-background-image:url('../img/bg_pattern.png');
-background-attachment:fixed;
+
 font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
 font-size:12px;
 height:100%;
@@ -106,44 +105,43 @@ animation:fade 3000ms infinite;
 }
 
 .addToDo {
-background-color: Transparent;
-border-color: Transparent;
-float:left;
-margin-left:0;
-position:absolute;
-left:0px
+/*background-color: white;*/
+height:32px;
 }
 
-.removeTasks {
-background-color: Transparent;
-border-color: Transparent;
-float:right;
-margin-right:0;
-position:absolute;
-right:0px;
+.startObs {
+/*background-color: red;*/
+width:64px;
+height:32px;
+}
+
+.stopObs {
+/*background-color: light-gray;*/
+width:64px;
+height:32px;
 }
 
 .checkbox {
-background-color:Transparent;
-background-image:url('../img/check_box.png');
+/*background-color:Transparent;
+background-image:url('../img/check_box.png');*/
 width:34px;
 height:32px;
 }
 
 .textbox {
-background-color:grey;
+/*background-color:grey;*/
 }
 
 .viewButton { 
-background-color:Transparent;
-background-image:url('../img/button_view.png');
+/*background-color:grey;*/
+/*background-image:url('../img/button_view.png');*/
 width:64px;
 height:32px;
 }
 
 .deleteButton { 
-background-color:Transparent;
-background-image:url('../img/button_delete.png');
+/*background-color:Transparent;
+background-image:url('../img/button_delete.png');*/
 width:64px;
 height:32px;
 }
