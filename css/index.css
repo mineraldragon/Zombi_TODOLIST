@@ -125,8 +125,8 @@ border-radius: 4px;*/
 .checkbox {
 /*background-color:Transparent;
 background-image:url('../img/check_box.png');*/
-width:34px;
-height:32px;
+/*width:34px;
+height:32px;*/
 }
 
 .textbox {
@@ -136,13 +136,13 @@ height:32px;
 .viewButton { 
 /*background-color:grey;*/
 /*background-image:url('../img/button_view.png');*/
-width:64px;
-height:32px;
+/*width:64px;
+height:32px;*/
 }
 
 .deleteButton { 
 /*background-color:Transparent;
 background-image:url('../img/button_delete.png');*/
-width:64px;
-height:32px;
+/*width:64px;
+height:32px;*/
 }
